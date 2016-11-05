@@ -1,0 +1,37 @@
+{
+  "name": "onefastsnail/dockerpress",
+  "type": "project",
+  "description": "A Dockerrrrizzzed Wordpress application.",
+  "homepage": "http://www.onefastsnail.com",
+  "authors": [
+    {
+      "name": "onefastsnail",
+      "email": "paul@onefastsnail.com",
+      "homepage": "https://www.onefastsnail.com"
+    }
+  ],
+  "config": {
+    "secure-http":false
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.2",
+    "composer/installers" : "~1.0",
+    "johnpbloch/wordpress-core-installer": "~0.2",
+    "johnpbloch/wordpress": "~4.6.1",
+    "vlucas/phpdotenv": "~2.4.0"
+  },
+  "extra": {
+    "wordpress-install-dir": "vendor/wordpress",
+    "installer-paths": {
+      "src/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "src/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "src/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  }
+}

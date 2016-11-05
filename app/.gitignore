@@ -1,0 +1,51 @@
+#Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+#Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+#Logs and databases
+*.log
+*.sql
+*.sqlite
+logs/
+
+#OS generated files
+.DS_Store
+.DS_Store?
+._*
+*._*
+.Spotlight-V100
+.Trashes
+ebs.db
+Thumbs.db
+
+#misc
+node_modules
+auth.json
+backups/
+
+#vendor stuff
+vendor/*
+!*assets/css/scss/vendor
+
+#wp stuff
+dist/
+
+src/wp-content/plugins/
+src/wp-content/mu-plugins/*
+!src/wp-content/mu-plugins/autoloader.php
+src/wp-content/uploads/*
+!src/wp-content/uploads/.gitkeep

@@ -1,0 +1,8 @@
+{
+    "http-basic": {
+        "yourcomposer.io": {
+            "username": "",
+            "password": ""
+        }
+    }
+}
