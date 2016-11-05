@@ -8,8 +8,8 @@ mysql:
 
 nginx:
     build: ./nginx/
-    ports:
-        - 80:80
+    expose:
+        - 8081
     links:
         - php
     volumes_from:
@@ -38,3 +38,13 @@ phpmyadmin:
         - mysql
     environment:
         PMA_HOST: mysql
+
+varnish:
+    build: ./varnish/
+    ports:
+        - 80:80
+    links:
+        - php
+        - nginx
+    volumes:
+        - ./data/varnish:/var/lib/varnish
